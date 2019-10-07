@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="logoPhotoHeight">100dp</dimen>
+    <dimen name="textSize">18sp</dimen>
+    <dimen name="margin">10dp</dimen>
+    <dimen name="marginBig">30dp</dimen>
+</resources>
