@@ -89,7 +89,8 @@
         android:layout_marginTop="@dimen/marginBig"
         android:layout_marginEnd="@dimen/marginBig"
         android:background="@color/colorAccent"
-        android:textColor="@color/colorText"/>
+        android:textColor="@color/colorText"
+        />
 
     <Button
         android:id="@+id/signUpButton"

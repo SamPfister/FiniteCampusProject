@@ -6,4 +6,28 @@
     android:layout_height="match_parent"
     tools:context=".ClassListActivity">
 
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Your Classes:"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:textColor="@color/colorText"
+        android:textSize="@dimen/textSize"
+        android:layout_margin="@dimen/margin"
+        android:textAlignment="center"/>
+
+    <Button
+        android:id="@+id/addClassButton"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_margin="@dimen/marginBig"
+        android:text="+"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:background="@color/colorAccent"
+        android:textColor="@color/colorText"/>
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>
