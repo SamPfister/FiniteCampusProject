@@ -31,7 +31,7 @@
         android:textAlignment="center"/>
 
     <EditText
-        android:id="@+id/editText"
+        android:id="@+id/name"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
@@ -47,7 +47,7 @@
         android:textSize="@dimen/textSize"/>
 
     <EditText
-        android:id="@+id/editText2"
+        android:id="@+id/password"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
@@ -55,7 +55,7 @@
         android:hint="Password"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editText"
+        app:layout_constraintTop_toBottomOf="@+id/name"
         android:layout_marginTop="@dimen/marginBig"
         android:layout_marginEnd="@dimen/margin"
         android:layout_marginStart="@dimen/margin"
@@ -63,7 +63,7 @@
         android:textSize="@dimen/textSize"/>
 
     <EditText
-        android:id="@+id/editText3"
+        android:id="@+id/confirmPassword"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
@@ -71,7 +71,7 @@
         android:hint="Confirm Password"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editText2"
+        app:layout_constraintTop_toBottomOf="@+id/password"
         android:layout_marginTop="@dimen/marginBig"
         android:layout_marginEnd="@dimen/margin"
         android:layout_marginStart="@dimen/margin"
@@ -82,24 +82,23 @@
         android:id="@+id/submitButton"
         android:layout_width="150dp"
         android:layout_height="60dp"
-        android:text="Submit"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editText3"
-        android:layout_marginTop="@dimen/marginBig"
         android:layout_marginEnd="@dimen/marginBig"
-        android:background="@color/colorAccent"
+        android:background="@drawable/oval"
+        android:text="Submit"
         android:textColor="@color/colorText"
-        />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/confirmPassword"
+        android:layout_marginTop="@dimen/marginBig"/>
 
     <Button
         android:id="@+id/cancelButton"
         android:layout_width="150dp"
         android:layout_height="60dp"
+        android:layout_marginStart="32dp"
+        android:background="@drawable/oval"
         android:text="Cancel"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editText3"
-        android:layout_marginTop="@dimen/marginBig"
-        android:layout_marginStart="@dimen/marginBig"
         android:textColor="@color/colorText"
-        android:background="@color/colorAccent"/>
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/confirmPassword"
+        android:layout_marginTop="@dimen/marginBig"/>
 </androidx.constraintlayout.widget.ConstraintLayout>

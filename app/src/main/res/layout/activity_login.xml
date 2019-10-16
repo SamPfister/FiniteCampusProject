@@ -88,7 +88,7 @@
         app:layout_constraintTop_toBottomOf="@+id/editText3"
         android:layout_marginTop="@dimen/marginBig"
         android:layout_marginEnd="@dimen/marginBig"
-        android:background="@color/colorAccent"
+        android:background="@drawable/oval"
         android:textColor="@color/colorText"
         />
 
@@ -102,5 +102,5 @@
         android:layout_marginTop="@dimen/marginBig"
         android:layout_marginStart="@dimen/marginBig"
         android:textColor="@color/colorText"
-        android:background="@color/colorAccent"/>
+        android:background="@drawable/oval"/>
 </androidx.constraintlayout.widget.ConstraintLayout>
