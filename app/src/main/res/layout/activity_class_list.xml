@@ -13,8 +13,11 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="42dp"
         android:text="ClassTwo"
+        android:background="@drawable/oval"
         app:layout_constraintStart_toStartOf="@+id/classOne"
-        app:layout_constraintTop_toBottomOf="@+id/classOne" />
+        app:layout_constraintTop_toBottomOf="@+id/classOne"
+        android:layout_marginStart="@dimen/margin"
+        android:layout_marginEnd="@dimen/margin"/>
 
     <TextView
         android:id="@+id/textView2"
@@ -30,10 +33,10 @@
 
     <Button
         android:id="@+id/addClassButton"
-        android:layout_width="60dp"
-        android:layout_height="60dp"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
         android:layout_margin="@dimen/marginBig"
-        android:background="@color/colorAccent"
+        android:background="@drawable/oval"
         android:text="+"
         android:textColor="@color/colorText"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -41,22 +44,28 @@
 
     <Button
         android:id="@+id/classOne"
+        android:background="@drawable/oval"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="156dp"
         android:text="ClassOne"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginStart="@dimen/margin"
+        android:layout_marginEnd="@dimen/margin"/>
 
     <Button
         android:id="@+id/classThree"
+        android:background="@drawable/oval"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="46dp"
         android:text="ClassThree"
         app:layout_constraintStart_toStartOf="@+id/classTwo"
-        app:layout_constraintTop_toBottomOf="@+id/classTwo" />
+        app:layout_constraintTop_toBottomOf="@+id/classTwo"
+        android:layout_marginStart="@dimen/margin"
+        android:layout_marginEnd="@dimen/margin"/>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
