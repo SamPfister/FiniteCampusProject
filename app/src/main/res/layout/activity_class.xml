@@ -49,17 +49,18 @@
 
     <Button
         android:id="@+id/addStudentButton"
-        android:layout_width="wrap_content"
+        android:layout_width="120dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="21dp"
         android:text="Add students"
+        android:background="@drawable/oval"
         app:layout_constraintEnd_toEndOf="@+id/listViewStudents"
         app:layout_constraintStart_toStartOf="@+id/listViewStudents"
         app:layout_constraintTop_toBottomOf="@+id/studentEditText" />
 
     <Button
         android:id="@+id/homeButton"
-        android:layout_width="wrap_content"
+        android:layout_width="120dp"
         android:layout_height="wrap_content"
         android:layout_marginBottom="24dp"
         android:background="@drawable/oval"
