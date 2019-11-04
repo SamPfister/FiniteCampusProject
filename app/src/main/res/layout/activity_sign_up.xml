@@ -4,13 +4,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".SignUpActivity"
-    android:background="@color/colorBackground">
+    android:background="@color/colorBackground"
+    tools:context=".SignUpActivity">
 
     <ImageView
         android:id="@+id/imageView"
         android:layout_width="wrap_content"
-        android:layout_height="@dimen/logoPhotoHeight"
+        android:layout_height="100dp"
+
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/logo" />
@@ -19,86 +20,59 @@
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin"
+        android:layout_marginTop="@dimen/marginBig"
+        android:layout_marginEnd="@dimen/margin"
         android:text="You're on your way to creating a new account, just put in your information here."
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView"
+        android:textAlignment="center"
         android:textColor="@color/colorText"
         android:textSize="@dimen/textSize"
-        android:layout_marginTop="@dimen/marginBig"
-        android:layout_marginStart="@dimen/margin"
-        android:layout_marginEnd="@dimen/margin"
-        android:textAlignment="center"/>
-
-    <EditText
-        android:id="@+id/name"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:hint="Name"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView"
+        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
+    <EditText
+        android:id="@+id/email"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin"
         android:layout_marginTop="@dimen/marginBig"
         android:layout_marginEnd="@dimen/margin"
-        android:layout_marginStart="@dimen/margin"
+        android:ems="10"
+        android:hint="Name"
+        android:inputType="textPersonName"
         android:textColor="@color/colorText"
-        android:textSize="@dimen/textSize"/>
+        android:textSize="@dimen/textSize"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
 
     <EditText
         android:id="@+id/password"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin"
+        android:layout_marginTop="@dimen/marginBig"
+        android:layout_marginEnd="@dimen/margin"
         android:ems="10"
-        android:inputType="textPassword"
         android:hint="Password"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/name"
-        android:layout_marginTop="@dimen/marginBig"
-        android:layout_marginEnd="@dimen/margin"
-        android:layout_marginStart="@dimen/margin"
-        android:textColor="@color/colorText"
-        android:textSize="@dimen/textSize"/>
-
-    <EditText
-        android:id="@+id/confirmPassword"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:ems="10"
         android:inputType="textPassword"
-        android:hint="Confirm Password"
+        android:textColor="@color/colorText"
+        android:textSize="@dimen/textSize"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/password"
-        android:layout_marginTop="@dimen/marginBig"
-        android:layout_marginEnd="@dimen/margin"
-        android:layout_marginStart="@dimen/margin"
-        android:textColor="@color/colorText"
-        android:textSize="@dimen/textSize"/>
+        app:layout_constraintTop_toBottomOf="@+id/email" />
+
 
     <Button
         android:id="@+id/submitButton"
-        android:layout_width="150dp"
-        android:layout_height="60dp"
-        android:layout_marginEnd="@dimen/marginBig"
+        android:layout_width="130dp"
+        android:layout_height="wrap_content"
         android:background="@drawable/oval"
         android:text="Submit"
-        android:textColor="@color/colorText"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/confirmPassword"
-        android:layout_marginTop="@dimen/marginBig"/>
-
-    <Button
-        android:id="@+id/cancelButton"
-        android:layout_width="150dp"
-        android:layout_height="60dp"
-        android:layout_marginStart="32dp"
-        android:background="@drawable/oval"
-        android:text="Cancel"
-        android:textColor="@color/colorText"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/confirmPassword"
-        android:layout_marginTop="@dimen/marginBig"/>
+        app:layout_constraintTop_toBottomOf="@+id/password"
+        android:layout_marginTop="50dp"/>
+
 </androidx.constraintlayout.widget.ConstraintLayout>

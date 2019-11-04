@@ -14,11 +14,19 @@ public class ClassListActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_class_list);
         Button button = (Button) findViewById(R.id.addClassButton);
+        Button classOneButton = (Button) findViewById(R.id.classOne);
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(ClassListActivity.this, AddClassActivity.class);
                 startActivity(intent);
+            }
+        });
+        classOneButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent z =  new Intent(ClassListActivity.this, ClassActivity.class);
+                startActivity(z);
             }
         });
     }

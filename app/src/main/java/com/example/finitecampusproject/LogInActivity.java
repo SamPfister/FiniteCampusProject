@@ -1,60 +1,87 @@
 package com.example.finitecampusproject;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Patterns;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ProgressBar;
+import android.widget.Toast;
+
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
+import com.google.firebase.auth.AuthResult;
+import com.google.firebase.auth.FirebaseAuth;
 
 public class LogInActivity extends AppCompatActivity {
+    private Button loginButton;
+    private Button signUpButton;
+    private EditText email;
+    private EditText password;
+    private FirebaseAuth mAuth;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
-        Button button = (Button) findViewById(R.id.logInButton);
-        Button button2 = (Button) findViewById(R.id.signUpButton);
-        button2.setOnClickListener(new View.OnClickListener() {
+        loginButton = (Button) findViewById(R.id.logInButton);
+        signUpButton = (Button) findViewById(R.id.SignUpButton);
+        email = (EditText) findViewById(R.id.editText);
+        password = (EditText) findViewById(R.id.editText2);
+        mAuth = FirebaseAuth.getInstance();
+        signUpButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(LogInActivity.this, SignUpActivity.class);
-                startActivity(intent);
+                Intent cool = new Intent(LogInActivity.this, SignUpActivity.class);
+                startActivity(cool);
             }
         });
-        button.setOnClickListener(new View.OnClickListener() {
+
+        userLogin();
+
+    }
+
+    private void userLogin() {
+        loginButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                EditText nameEditText = (EditText)findViewById(R.id.editText);
-                EditText passwordEditText = (EditText)findViewById(R.id.editText2);
-                EditText confirmPasswordEditText = (EditText)findViewById(R.id.editText3);
-                String name = nameEditText.getText().toString().trim();
-                String password = passwordEditText.getText().toString().trim();
-                String confirmPassword = confirmPasswordEditText.getText().toString().trim();
-                boolean check = true;
-                if(name.isEmpty()){
-                    nameEditText.setError("Name cannot be empty");
-                    check = false;
+                String emailID = email.getText().toString().trim();
+                String passwordInfo = password.getText().toString().trim();
+
+                if(emailID.isEmpty()){
+                    email.setError("Email is required");
+                    email.requestFocus();
+                    return;
                 }
-                if(password.isEmpty()){
-                    passwordEditText.setError("Password cannot be empty");
-                    check = false;
+                if(!Patterns.EMAIL_ADDRESS.matcher(emailID).matches()){
+                    email.setError("Please enter a valid email id");
+                    email.requestFocus();
+                    return;
                 }
-                if(confirmPassword.isEmpty()){
-                    confirmPasswordEditText.setError("Confirm Password cannot be empty");
-                    check = false;
+                if(passwordInfo.isEmpty()){
+                    password.setError("Password is required");
+                    password.requestFocus();
+                    return;
                 }
-                if(!(confirmPassword.equals(password))){
-                    confirmPasswordEditText.setError("Passwords do not match");
-                    check = false;
-                }
-                if(check){
-                    Intent intent = new Intent(LogInActivity.this, ClassListActivity.class);
-                    startActivity(intent);
-                }
+                mAuth.signInWithEmailAndPassword(emailID, passwordInfo).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
+                    @Override
+                    public void onComplete(@NonNull Task<AuthResult> task) {
+                        if(task.isSuccessful()){
+                            Intent b = new Intent(LogInActivity.this,ClassListActivity.class);
+                            b.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+                            startActivity(b);
+                        }else{
+                            Toast.makeText(LogInActivity.this, task.getException().getMessage(), Toast.LENGTH_SHORT).show();
+                        }
+                    }
+                });
             }
         });
+
     }
 
 }

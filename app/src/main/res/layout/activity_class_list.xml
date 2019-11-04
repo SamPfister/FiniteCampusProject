@@ -4,31 +4,59 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ClassListActivity"
-    android:background="@color/colorBackground">
+    android:background="@color/colorBackground"
+    tools:context=".ClassListActivity">
+
+    <Button
+        android:id="@+id/classTwo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="42dp"
+        android:text="ClassTwo"
+        app:layout_constraintStart_toStartOf="@+id/classOne"
+        app:layout_constraintTop_toBottomOf="@+id/classOne" />
 
     <TextView
         android:id="@+id/textView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margin"
         android:text="Your Classes:"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
+        android:textAlignment="center"
         android:textColor="@color/colorText"
         android:textSize="@dimen/textSize"
-        android:layout_margin="@dimen/margin"
-        android:textAlignment="center"/>
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/addClassButton"
         android:layout_width="60dp"
         android:layout_height="60dp"
         android:layout_margin="@dimen/marginBig"
-        android:text="+"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
         android:background="@color/colorAccent"
-        android:textColor="@color/colorText"/>
+        android:text="+"
+        android:textColor="@color/colorText"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <Button
+        android:id="@+id/classOne"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="156dp"
+        android:text="ClassOne"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/classThree"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="46dp"
+        android:text="ClassThree"
+        app:layout_constraintStart_toStartOf="@+id/classTwo"
+        app:layout_constraintTop_toBottomOf="@+id/classTwo" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
