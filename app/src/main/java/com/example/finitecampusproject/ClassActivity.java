@@ -21,6 +21,7 @@ import java.util.HashMap;
 
 public class ClassActivity extends AppCompatActivity {
     private Button addStudentButton;
+    private Button viewAllAssignmentsButton;
     private EditText addStudentEditText;
     private ArrayList<String> arrayList;
     private ArrayAdapter<String> arrayAdapter;
@@ -35,12 +36,20 @@ public class ClassActivity extends AppCompatActivity {
         home = (Button) findViewById(R.id.homeButton);
         addStudentButton = (Button) findViewById(R.id.addStudentButton);
         addStudentEditText = (EditText) findViewById(R.id.studentEditText);
+        viewAllAssignmentsButton = (Button) findViewById(R.id.viewAllAssignmentsButton);
         listView = (ListView) findViewById(R.id.listViewStudents);
         arrayList = new ArrayList<>();
         arrayAdapter = new ArrayAdapter<>(ClassActivity.this,android.R.layout.simple_list_item_1,arrayList);
         listView.setAdapter(arrayAdapter);
         addingStudents();
         homeButtonDatabase();
+        viewAllAssignmentsButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(ClassActivity.this, ViewAllAssignmentsActivity.class);
+                startActivity(intent);
+            }
+        });
     }
     private void addingStudents(){
         addStudentButton.setOnClickListener(new View.OnClickListener() {

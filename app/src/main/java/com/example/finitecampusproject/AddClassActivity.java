@@ -33,7 +33,6 @@ public class AddClassActivity extends AppCompatActivity {
                 String className = classNameEditText.getText().toString().trim();
                 arrayList.add(className);
                 classNameEditText.setText("");
-
             }
         });
         submitButtonClick();
@@ -50,7 +49,6 @@ public class AddClassActivity extends AppCompatActivity {
                     reference.setValue(classNameMap);
                 Intent intent = new Intent(AddClassActivity.this, ClassListActivity.class);
                 startActivity(intent);
-
             }
         });
     }

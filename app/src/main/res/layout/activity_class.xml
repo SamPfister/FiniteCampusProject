@@ -52,7 +52,7 @@
         android:layout_width="120dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="21dp"
-        android:text="Add students"
+        android:text="Add student"
         android:background="@drawable/oval"
         app:layout_constraintEnd_toEndOf="@+id/listViewStudents"
         app:layout_constraintStart_toStartOf="@+id/listViewStudents"
@@ -60,15 +60,27 @@
 
     <Button
         android:id="@+id/homeButton"
-        android:layout_width="120dp"
+        android:layout_width="150dp"
         android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
         android:layout_marginBottom="24dp"
         android:background="@drawable/oval"
         android:text="Home"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/listViewStudents" />
+        app:layout_constraintTop_toBottomOf="@+id/listViewStudents"/>
+
+    <Button
+        android:id="@+id/viewAllAssignmentsButton"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="24dp"
+        android:background="@drawable/oval"
+        android:text="View All Assignments"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/homeButton"
+        android:layout_marginEnd="24dp"/>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
