@@ -33,14 +33,15 @@
 
     <Button
         android:id="@+id/addClassButton"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:layout_margin="@dimen/marginBig"
-        android:background="@drawable/oval"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_margin="@dimen/margin"
+        android:background="@drawable/circle"
         android:text="+"
         android:textColor="@color/colorText"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        android:textSize="40sp"/>
 
     <Button
         android:id="@+id/classOne"
