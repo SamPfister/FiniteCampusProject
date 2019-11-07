@@ -32,6 +32,7 @@ public class ClassActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out);
         setContentView(R.layout.activity_class);
         home = (Button) findViewById(R.id.homeButton);
         addStudentButton = (Button) findViewById(R.id.addStudentButton);

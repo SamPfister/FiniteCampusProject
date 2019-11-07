@@ -26,7 +26,9 @@ public class LogInActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        //source for all animations https://stackoverflow.com/questions/3389501/activity-transition-in-android
         super.onCreate(savedInstanceState);
+        overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out);
         setContentView(R.layout.activity_login);
         loginButton = (Button) findViewById(R.id.logInButton);
         signUpButton = (Button) findViewById(R.id.SignUpButton);

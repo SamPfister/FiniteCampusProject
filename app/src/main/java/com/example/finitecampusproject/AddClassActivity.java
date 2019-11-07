@@ -23,6 +23,7 @@ public class AddClassActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out);
         setContentView(R.layout.activity_add_class);
         classNameEditText = (EditText) findViewById(R.id.editText);
         Button button2 = (Button) findViewById(R.id.cancelButton);
